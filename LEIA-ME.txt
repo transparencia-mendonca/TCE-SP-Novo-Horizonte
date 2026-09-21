@@ -1,4 +1,4 @@
-TCESP Novo Horizonte — v0.9.20-NH
+TCESP Novo Horizonte — v0.9.21-NH
 
 Painel analítico de receitas e despesas municipais com base nos dados oficiais disponibilizados pelo Tribunal de Contas do Estado de São Paulo (TCESP).
 
@@ -35,7 +35,7 @@ Baseline: novo-horizonte-baseline-2026-09-21
 Build: 0919NH-20260921
 
 
-CORREÇÃO v0.9.20-NH
+CORREÇÃO v0.9.21-NH
 - Detecta automaticamente IndexedDB vazio deixado por carga anterior interrompida.
 - Recarrega a baseline permanente quando a base local existe, mas está vazia.
 - Não volta para tela zerada se a gravação do objeto grande no IndexedDB falhar.
@@ -43,9 +43,17 @@ CORREÇÃO v0.9.20-NH
 - Força revalidação do manifesto e dos arquivos anuais para evitar cache HTTP obsoleto.
 
 
-CORREÇÃO v0.9.20-NH — BASE GRANDE / SAFARI MÓVEL
+CORREÇÃO v0.9.21-NH — BASE GRANDE / SAFARI MÓVEL
 - A abertura não carrega mais os 775 mil registros históricos de uma só vez.
 - O painel abre com o exercício mais recente e carrega os demais quando o usuário seleciona o ano.
 - Anos já carregados permanecem disponíveis na sessão e entram na comparação.
 - Migração intencional do armazenamento local para tcesp-novo-horizonte-v7, isolando a base vazia/pesada da versão anterior.
 - Nenhum arquivo anual foi alterado.
+
+
+CORREÇÃO v0.9.21-NH — SELETOR DE EXERCÍCIO / ROLAGEM
+- O ano escolhido pelo usuário passa a ser estado explícito do painel.
+- Re-renderizações não podem mais devolver o seletor para outro exercício.
+- Cargas assíncronas fora de ordem são descartadas por token de navegação.
+- A posição vertical/horizontal da página é preservada ao trocar de exercício.
+- O seletor fica temporariamente bloqueado durante a carga para evitar corridas entre anos.
