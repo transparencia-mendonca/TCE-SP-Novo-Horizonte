@@ -1,6 +1,6 @@
 <!doctype html><html lang="pt-BR"><head><script>
 (function(){
-  window.TCESP_BUILD_ID="0919NH-20260921";
+  window.TCESP_BUILD_ID="0920NH-20260921";
   try{
     if("serviceWorker" in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.map(function(r){return r.unregister()}))}).catch(function(){})}
     if("caches" in window){caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return /^tcesp-novo-horizonte-/i.test(k)}).map(function(k){return caches.delete(k)}))}).catch(function(){})}
@@ -10,13 +10,13 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#17324d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="TCESP Novo Horizonte">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg">
-<title>TCESP Novo Horizonte</title><link rel="stylesheet" href="style.css?v=0919NH-20260921"><script>
+<title>TCESP Novo Horizonte</title><link rel="stylesheet" href="style.css?v=0920NH-20260921"><script>
 window.TCESP_PERMANENT_BASELINE={
   manifest:"baseline-manifest.json",
   version:"novo-horizonte-baseline-2026-09-21"
 };
 </script></head><body>
-<header><div><div class="brandline"><b>TCESP • Novo Horizonte</b><span class="version-badge">v0.9.19-NH</span></div><small>Painel analítico de receitas e despesas</small></div><button id="installBtn" hidden>Instalar</button></header>
+<header><div><div class="brandline"><b>TCESP • Novo Horizonte</b><span class="version-badge">v0.9.20-NH</span></div><small>Painel analítico de receitas e despesas</small></div><button id="installBtn" hidden>Instalar</button></header>
 <main>
 <section class="controls card">
 <label>Exercício<select id="ano"><option value="2026">2026</option><option value="2025">2025</option></select></label><label>Mês<select id="mes"><option value="0">Ano inteiro</option></select></label>
@@ -57,4 +57,4 @@ window.TCESP_PERMANENT_BASELINE={
   <div class="dialog-head"><div><small>Ficha histórica do credor</small><h2 id="paymentDetailTitle">Ficha do credor</h2></div><button id="closePaymentDialog" type="button" aria-label="Fechar detalhamento">Fechar</button></div>
   <div id="paymentDetailBody"></div>
 </dialog>
-<script src="seed-data.js"></script><script src="app.js?v=0919NH-20260921"></script></body></html>
+<script src="seed-data.js"></script><script src="app.js?v=0920NH-20260921"></script></body></html>
